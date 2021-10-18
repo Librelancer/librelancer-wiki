@@ -31,15 +31,15 @@ Usually 44 bytes
 |-|-|-|-|
 0x00  | uint32  | Next sibling offset  | 
 0x04  | uint32  | Dictionary name offset  | 
-0x08  | uint32  | Entry type  | Directory or file (see: Win32 API dwFileAttributes)
-0x0C  | uint32  | Sharing attributes  | 
+0x08  | uint32  | Entry type  | Directory (0x10) or file (0x80) (see: Win32 API dwFileAttributes)
+0x0C  | uint32  | Sharing attributes  | Ignored - Set to zero
 0x10  | uint32  | Child or data offset  | Offset to child entry if type is 0x80 or to data if type is 0x10
 0x14  | uint32  | Allocated data size  | Allocated data byte length.
 0x18  | uint32  | Used data size  | Actually used data byte length.
-0x20  | uint32  | Uncompressed data size  | Same as above.
-0x24  | uint32  | Creation time  | 
-0x28  | uint32  | Last access time  | 
-0x2C  | uint32  | Last write time  | 
+0x1C  | uint32  | Uncompressed data size(?)  | Should always be equal to `Used data size`.
+0x20  | uint32  | Creation time  | 
+0x24  | uint32  | Last access time  | 
+0x28  | uint32  | Last write time  | 
 
 - In theory timestamps can be cut to save some space for UTFs with a lot of entries. The game doesn't mind.
 
