@@ -24,15 +24,15 @@ A typical TXM file has the following structure:
 /
 └─ Texture library
 ├─ <TextureName>_0
-│ ├─ MIP0
-│ ├─ MIP1
-│ ├─ MIP2
-│ ├─ MIP3
-│ ├─ MIP4
-│ ├─ MIP5
-│ ├─ MIP6
+│ ├─ MIP8
 │ ├─ MIP7
-│ └─ MIP8
+│ ├─ MIP6
+│ ├─ MIP5
+│ ├─ MIP4
+│ ├─ MIP3
+│ ├─ MIP2
+│ ├─ MIP1
+│ └─ MIP0
 └─ <TextureName>
 ├─ Texture count
 ├─ Frame count
